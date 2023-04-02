@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="style.css" rel="stylesheet">
+		
+		<title>
+			Timetable Generator
+		</title>
+	</head>
+
+	<body>
+		<h1> VIT Timetable Generator</h1>
+
+		<div id="wrapper">
+			<!-- Left pane starts -->
+			<div id="controls">
+				<h2>Select Courses</h2>
+				<div id="school-tabs" class="buttons">
+				</div>
+
+				<div id="school-list">
+				</div>
+
+				<div class="buttons">
+					<div>
+						<input type="checkbox" id="color" checked>
+						<label for="color">Add Colors?</label><br>
+					</div>
+					<button type="button" id="gen-code">Generate with Codes</button>
+					<button type="button" id="gen-nick">Generate with Nicknames</button>
+					<button id="reset">Reset</button>
+					<button type="button" id="pdf">Download PDF</button>
+				</div>
+			</div>
+			<!-- Left pane ends here -->
+
+			<!-- Right pane starts -->
+			<div id="preview">
+				<h2>Generated Timetable</h2>
+				<div id="tab">
+					<table>
+						<tr>
+							<th scope="col">Day</th>
+							<th scope="col">08:00-08:50</th>
+							<th scope="col">08:50-09:40</th>
+							<th scope="col">09:50-10:40</th>
+							<th scope="col">10:40-11:30</th>
+							<th scope="col">01:20-02:00</th>
+							<th scope="col">02:00-02:50</th>
+							<th scope="col">02:50-03:40</th>
+							<th scope="col">03:50-04:40</th>
+							<th scope="col">05:50-06:30</th>
+							<th scope="col">06:30-07:20</th>
+							<th scope="col">07:30-08:00</th>
+						</tr>
+
+						<tr>
+							<th scope="row">Monday</th>
+							<td class="A1">A1</td>
+							<td class="B1">B1</td>
+							<td class="C1">C1</td>
+							<td class="D1">D1</td>
+							<td class="lunch">Lunch Break</td>
+							<td class="E1">E1</td>
+							<td class="G1">G1</td>
+							<td class="H1">H1</td>
+							<td class="I1">I1</td>
+							<td class="J1 J">J1</td>
+							<td class="K1 K">K1</td>
+						</tr>
+
+						<tr>
+							<th scope="row">Tuesday</th>
+							<td class="F1">F1</td>
+							<td class="A1">A1</td>
+							<td class="B1">B1</td>
+							<td class="C1">C1</td>
+							<td class="lunch">Lunch Break</td>
+							<td class="D1">D1</td>
+							<td class="G1">G1</td>
+							<td class="H1">H1</td>
+							<td class="I1">I1</td>
+							<td class="K2 K">K1</td>
+							<td class="J2 J">J1</td>
+						</tr>
+
+						<tr>
+							<th scope="row">Wednesday</th>
+							<td class="E2">E2</td>
+							<td class="F2">F2</td>
+							<td class="A2">A2</td>
+							<td class="B2">B2</td>
+							<td class="lunch">Lunch Break</td>
+							<td class="C2">C2</td>
+							<td class="G2">G2</td>
+							<td class="H2">H2</td>
+							<td class="I2">I2</td>
+							<td class="J1 J">J1</td>
+							<td class="K1 K">K1</td>
+						</tr>
+
+						<tr>
+							<th scope="row">Thursday</th>
+							<td class="D2">D2</td>
+							<td class="E2">E2</td>
+							<td class="F2">F2</td>
+							<td class="A2">A2</td>
+							<td class="lunch">Lunch Break</td>
+							<td class="B2">B2</td>
+							<td class="G2">G2</td>
+							<td class="H2">H2</td>
+							<td class="I2">I2</td>
+							<td class="K2 K">K2</td>
+							<td class="J2 J">J2</td>
+						</tr>
+
+						<tr>
+							<th scope="row">Friday</th>
+							<td class="C2">C2</td>
+							<td class="D2">D2</td>
+							<td class="E2">E2</td>
+							<td class="F2">F2</td>
+							<td class="lunch">Lunch Break</td>
+							<td class="A2">A2</td>
+							<td class="G1">G1</td>
+							<td class="TA1">TA1</td>
+							<td class="TB1">TB1</td>
+							<td class="TC1">TC1</td>
+							<td class="TD1">TD1</td>
+						</tr>
+					</table>
+				</div>
+				<h2 id="h2leg" class="hidden">Legend</h2>
+				<ul id="legend">
+				</ul>
+			</div>
+			<!-- Right pane ends here -->
+		</div>
+
+
+		<script src="scripts/jspdf.umd.min.js"></script>
+		<script src="scripts/jspdf.plugin.autotable.js"></script>
+		<script src="scripts/html2canvas.min.js"></script>
+		<script src="scripts/data.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>
